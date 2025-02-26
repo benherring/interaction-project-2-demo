@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 INPUT 1 OUTPUT TEMPLATE</title>
+    <style>
+
+        /* STYLE FOR THE INPUT FIELD */
+        #charInput {
+            si
+
+        }
+
+        /* STYLE FOR THE SUBMIT BUTTON */
+        #submitButton {
+            font-size: x-large;
+
+        }
+
+        /* STYLE FOR THE IMAGE */
+        #displayedImage {
+            display: none; /* This line is mandatory */
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- INPUT FIELD FOR 1 CHARACTER -->
+    <input type="text" id="charInput" maxlength="1">
+
+    <!-- BUTTON TO DISPLAY IMAGE -->
+    <button onclick="displayImage()" id="submitButton">Show Image</button>
+
+    <!-- IMAGE TO DISPLAY -->
+    <img id="displayedImage" src="" alt="Displayed Image">
+
+
+    <!-- Image Display Script Below -->
+    <script>
+        // Array of images
+        // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
+        const images = [
+            "images/Screenshot 2025-02-24 at 1.19.57 AM.png", //A
+            "images/Screenshot 2025-02-24 at 1.20.49 AM.png", //B
+            "images/Screenshot 2025-02-24 at 1.23.18 AM.png", //C
+            "images/Screenshot 2025-02-24 at 1.23.33 AM.png", //4
+            "images/Screenshot 2025-02-24 at 1.24.35 AM.png", //E
+            "images/Screenshot 2025-02-24 at 1.25.25 AM.png", //F
+            "images/Screenshot 2025-02-24 at 1.25.34 AM.png", //G
+            "images/Screenshot 2025-02-24 at 1.26.58 AM.png", //H
+            "images/Screenshot 2025-02-24 at 1.27.38 AM.png", //I
+            "images/Screenshot 2025-02-24 at 1.28.04 AM.png", //J
+            "images/Screenshot 2025-02-24 at 1.29.20 AM.png", //K
+            "images/Screenshot 2025-02-24 at 1.30.10 AM.png", //L
+            "images/Screenshot 2025-02-24 at 1.30.38 AM.png", //M
+            "images/Screenshot 2025-02-24 at 1.31.00 AM.png", //N
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=O", //O
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=P", //P
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Q", //Q
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=R", //R
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=S", //S
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=T", //T
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=U", //U
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=V", //V
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=W", //W
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=X", //X
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Y", //Y
+            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Z"  //Z
+        ];
+
+        function displayImage() {
+            const input = document.getElementById("charInput").value.toUpperCase();
+            const imgElement = document.getElementById("displayedImage");
+            
+            // Assign an image based on character (A-Z)
+            const index = input.charCodeAt(0) - 65; // 'A' is 65 in ASCII
+            if (index >= 0 && index < images.length) {
+                imgElement.src = images[index];
+                imgElement.style.display = "block";
+            } else {
+                /* 
+                alert("Please enter a letter between A and Z.");
+                imgElement.style.display = "none";
+                */
+
+                // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
+                imgElement.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmtkdnJhMXY4Njd1cXR3MTM3MW1nMzZ1NXNhNHlhOHA0MWF2dDUzdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13dRJkj5wgKq9q/giphy.gif"
+                imgElement.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
