@@ -8,32 +8,40 @@
 
         /* STYLE FOR THE INPUT FIELD */
         #charInput {
-            s
-            
 
         }
 
+        img {
+  width: 50%;
+  height: auto;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+.photos{
+    margin-left:500px;
+}
+
+.poison{
+    color: azure;
+    font-family: Helvetica, sans-serif;
+}
+
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
-            font-size: 50px;
-            
-            
 
         }
 
         /* STYLE FOR THE IMAGE */
         #displayedImage {
             display: none; /* This line is mandatory */
-            width: 110em;
-            margin-top: 100px;
-            margin-right: 10%;
-            margin-left: 10%;        
-}
+        }
     </style>
 </head>
 <body>
 
-    
+    <h1 class="poison">give me a letter. pick your poison. find a frame.</h1>
     <!-- INPUT FIELD FOR 1 CHARACTER -->
     <input type="text" id="charInput" maxlength="1">
 
@@ -45,7 +53,7 @@
 
 
     <!-- Image Display Script Below -->
-    <script>
+    <script class="photos">
         // Array of images
         // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
         const images = [
@@ -77,12 +85,7 @@
             "images/PNG image 4.png"  //Z
         ];
        
-<style>
-img {
-  width: 100%;
-  height: auto;
-}
-</style>
+
 
 
         function displayImage() {
