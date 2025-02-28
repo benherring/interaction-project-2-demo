@@ -8,20 +8,27 @@
 
         /* STYLE FOR THE INPUT FIELD */
         #charInput {
-            si
+            s
+            
 
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
-            font-size: x-large;
+            font-size: 50px;
+            
+            
 
         }
 
         /* STYLE FOR THE IMAGE */
         #displayedImage {
             display: none; /* This line is mandatory */
-        }
+            width: 110em;
+            margin-top: 100px;
+            margin-right: 10%;
+            margin-left: 10%;        
+}
     </style>
 </head>
 <body>
@@ -56,19 +63,27 @@
             "images/Screenshot 2025-02-24 at 1.30.10 AM.png", //L
             "images/Screenshot 2025-02-24 at 1.30.38 AM.png", //M
             "images/Screenshot 2025-02-24 at 1.31.00 AM.png", //N
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=O", //O
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=P", //P
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Q", //Q
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=R", //R
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=S", //S
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=T", //T
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=U", //U
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=V", //V
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=W", //W
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=X", //X
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Y", //Y
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Z"  //Z
+            "images/1.png", //O
+            "images/2.png", //P
+            "images/4.png", //Q
+            "images/5.png", //R
+            "images/6.png", //S
+            "images/7.png", //T
+            "images/8.png", //U
+            "images/9.png", //V
+            "images/Screenshot 2024-04-18 at 3.31.31 PM.png", //W
+            "images/PNG image 3.png", //X
+            "images/PNG image 6.png", //Y
+            "images/PNG image 4.png"  //Z
         ];
+       
+<style>
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
+
 
         function displayImage() {
             const input = document.getElementById("charInput").value.toUpperCase();
